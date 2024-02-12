@@ -1,6 +1,14 @@
 #!/bin/bash
 
-echo "downlading firefox, neovim, git, vs code"
+
+echo "downloading the system aestehtics from prasanthrangan/hyperdots"
+echo "-----------------------------------------------"
+pacman -Sy git
+git clone --depth 1 https://github.com/prasanthrangan/hyprdots ~/Hyprdots
+cd ~/Hyprdots/Scripts
+./install.sh
+
+echo "downlading firefox, neovim,  vs code"
 echo "-----------------------------------------------"
 yay -S neovim firefox git visual-studio-code-bin pacman-contrib starship --needed
 
